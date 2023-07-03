@@ -49,7 +49,7 @@ span {
   /* 배경 두개 겹치기 
      background-image: url("../image/flower.jpeg") , url("");
     */
-  background-image: url('/image/shoes.jpg');
+  background-image: url('../image/shoes.jpg');
 
   /*  */
   background-size: cover;
