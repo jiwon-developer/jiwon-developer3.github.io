@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+   
+/* font-family: 'Nunito Sans', sans-serif; */
+/* font-family: 'Prompt', sans-serif; */
+   font-family: 'Roboto Mono', monospace;
+   box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;
+}
+
+.main-bg{
+    background-color: #f7f9fc;
+    width: 100%;
+    padding: 50px;
+
+}
+
+.whiteBox{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 2px 1px #eee;
+
+}
+
+.mybtn{
+    background-color: #6fbaf8;
+    color: white;
+}
+
+.blue{
+  color: #6fbaf8;   
+}
+
+.card-box{
+
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+
+.card3{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-between;
+    height: 300px;
+}
+.sm{
+  font-size: 0.7em;
+}
+.md{
+  font-size: 0.8em;
+}
+
+.lg{
+    font-size: 1.2em;
+}
+.xl{
+    font-size: 1.5em;
+}
+
+.profile-box{
+
+    border-right: 1px solid lightgrey;
+}
+
+@media screen and (max-width:900px){
+
+    html{
+        font-size: 14px;
+    }
+    
+ 
+}
+
+
+@media screen and (max-width:670px){
+
+    html{
+        font-size: 12px;
+    }
+    .skill-card{
+        max-height:min-content;
+    }
+    
+    .profile-box{
+        border: none;
+    }
+
+}

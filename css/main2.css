@@ -1,0 +1,518 @@
+/* 숙련자들은 css 파일 맨 위에 호환성 이슈 해결책부터 첨부하는 경우 있음
+    nomalize.css
+*/
+
+/* 내가 준비한 폰트 파일을 css 에서 사용가능하게 등록하는 과정
+    한글 폰트는 용량이 너무큼 ->최대 2개만 쓰자 ,  .woff 파일이 용량이 작음
+    굵은 폰트는 따로다운로드 받아야함
+*/
+@font-face {
+  font-family: 'nanumfont';
+  font-weight: 800;
+  src: url('../font/NanumSquareAcB.woff');
+  /* font-weight: 900; */
+}
+@font-face {
+  font-family: 'nanumfont';
+  src: url('../font/NanumSquareAcR.woff');
+
+  /* font-weight: 900; */
+}
+div,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-weight: 800;
+  /* font-family: 'nanumfont', 'gulim','dotum','arial'; */
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+p,
+h4,
+h3,
+h2,
+h1,
+span {
+  /* 폰트부드럽게  처리하려면 회전 시켜보기 
+        맥은 원래 부드럽게 처리됨
+    */
+  transform: rotate(0.03deg);
+}
+
+.main-background {
+  width: 100%;
+  height: 600px;
+  /* 배경 두개 겹치기 
+     background-image: url("../image/flower.jpeg") , url("");
+    */
+  background-image: url('../image/shoes.jpg');
+
+  /*  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+
+  /* filter : 박스에 보정입히기 (필터 입히기)  
+        박스 전체에 적용됨 (글씨 배경 모두)
+        배경에만 색 적용하고 싶으면 ->overlay 
+        */
+  /* filter: brightness(70%) saturate(150%); */
+  padding: 1px;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  text-align: center;
+
+  /* parent element for main btn  */
+  position: relative;
+}
+
+.main-title {
+  color: white;
+  font-size: 40px;
+  margin-top: 100px;
+  /* margin-bottom: 80px; */
+}
+.main-content {
+  color: white;
+  width: fit-content;
+  /* margin: auto; */
+  margin: 50px auto;
+  width: 70%;
+}
+
+.main-button {
+  /* height: 30px; */
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* position properties */
+  /* position: relative; 내 위치기준으로 */
+  position: absolute; /*부모요소중 position:relative를 값을 준 부모를 기준으로부터  이동 : main-background*/
+  /* bottom: 30px;
+    right: 20px; */
+  /* absolute 사용할때 가운데정렬 하는방법 */
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  /* left:100px;
+    
+    */
+  /* z-index: 10; */
+}
+
+.fixedBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.comment-box {
+  position: relative;
+  /* bottom: 20px; */
+  /* bottom: 10px; */
+
+  top: 300px;
+  width: 30%;
+  height: auto;
+  padding: 20px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  background-color: rgb(243, 243, 243);
+}
+
+.comment-box2 {
+  /* bottom: 20px; /
+    /* bottom: 10px; */
+
+  width: 80%;
+  /*  width %의 문제는 pc 사이즈에서 너무 큼-> max-width와함께 쓰기! */
+  max-width: 700px;
+
+  padding: 20px;
+  margin: auto;
+  background-color: #eee;
+  text-align: center;
+
+  position: relative;
+  top: -40px;
+  /* z-index: 3; 높을수록 앞으로 나옴   */
+  box-sizing: border-box; /* width 설정시 padding , border포함시켜서 계산됨*/
+}
+/* 
+input[type=text]{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+} */
+
+.form-background {
+  background-color: black;
+  padding: 30px;
+  /* height: 500px; */
+  /* width: 70%; */
+}
+
+.form-white {
+  background-color: white;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  height: 100%;
+}
+.form-input {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.w-50 {
+  /* padding: 10px; */
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+.w-100 {
+  width: 100%;
+  padding: 10px;
+}
+
+.form-long {
+  height: 100px;
+}
+
+.yellow-button {
+  padding: 10px;
+  width: 100px;
+  background-color: rgb(200, 100, 18);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  /*   오른쪽 맨끝정렬 
+     display: blo÷≥ck; 
+        margin-left: auto;
+    */
+  float: right;
+}
+
+/* flex-box */
+.flex-container {
+  display: flex;
+  /* 가로 정렬 - justify-content: flex-end
+    flex-start, space-between, center ...
+    
+    ; 세로정렬 - flex-direction: column /row (기본값이 row로 설정되어있음) */
+  /* flex-wrap: width 보다 크면 밑으로 보내고 싶을때 
+     flex-direction: column;  
+    flex-wrap: wrap; */
+
+  height: 400px;
+  /* flex 상하정렬  -align-items  */
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  margin: 5px;
+}
+
+/* .flex-item:nth-child(1){
+flex-grow: 1;
+} */
+
+.flex-item:nth-child(2) {
+  flex-grow: 2;
+}
+
+
+.nav-container {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 10px;
+}
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-grow {
+  flex-grow: 1;
+}
+
+
+/* .nav-container {
+  
+  height: 50px;
+  padding: 10px;
+}
+
+
+.nav-item{
+  float: right;
+  padding: 10px;
+}
+.nav-item:nth-child(1){
+  float: left;
+  
+} */
+
+
+.test{
+    width: 100vw;
+    height: 50px;
+    background: grey;
+}
+
+
+.shop-bg{
+  background-color: #eee;
+  padding: 20px;  
+}
+
+.shop-container{
+  display: flex;
+ 
+  width: 90%;
+  margin: auto;
+}
+
+.shop-item{  
+  width: 33%;
+  padding: 15px;
+
+
+}
+.shop-item img{
+  width: 100%;
+  display: block;
+}
+
+.overlay-wrap{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /* 넘치는 요소를 안보이게 하기 */
+  overflow:hidden;
+  
+
+
+}
+
+.overlay-black{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  /* overlay-wrap에 마우스 올리면 50% 아니면 100% */
+  margin-top: 100%; 
+  color: white;
+text-align: center;
+  padding-top: 30px;
+
+  transition: all  1s ;
+ 
+}
+
+
+
+/* Pseudo-class : (:) 특정요소가 다른상태일때 스타일 줄수 있게 도와줌 ex ) :hover
+
+  Pseudo-element :  (::) 내부의 특정 일부분만 스타일줄때 사용
+*/
+
+
+.overlay-wrap:hover .overlay-black{
+  margin-top: 50%;
+ 
+}
+.pseudo::first-letter{
+  color: red;
+  font-size: 30px;
+
+}
+
+.pseudo::first-line{
+  color: blue;
+}
+  
+
+.pseudo::after{
+  content: ' <after content> ';
+}
+.pseudo::before{
+  content: ' <before content> ';
+}
+
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+
+  /* text-align: center; */
+    /* 완전투명  */
+  opacity: 1;
+/* transition위에 모든(all) 스타일이 뭔가 변하면 1s에 걸쳐서 서서히변해라 */
+  transition: all ease-out 1s ;
+  /* transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
+
+}
+
+
+.product-container i{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: burlywood;
+  padding-top: 25px;
+  box-sizing: border-box;
+  color: white;
+  margin-top: 10px;
+}
+
+
+.product-container{
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+}
+
+.product-container::after{
+  /* clear를 준 빈  div 박스 생성  */
+  content:'';
+  display: block;
+
+  clear: both;
+  float: none;
+}
+
+
+
+/* .input-file::file-selector-button{
+   background:skyblue;
+   border: none;
+   padding: 20px;
+} */
+
+.input-file::file-selector-button:hover{
+   background: blue;
+}
+
+input::-webkit-input-placeholder{
+  color: red;
+}
+
+
+input[type=range]{
+  /* 브라우저 기본 css 안보이게 설정 */
+  appearance: none; 
+}
+input[type="range" i]::-webkit-slider-thumb{
+  appearance: none;
+  background: red;
+  width: 50px;
+  height: 50px;
+}
+
+progress{
+  appearance: none;
+  background: green;
+  height: 10px;
+}
+progress::-webkit-progress-bar{
+  background-color: wheat;
+}
+
+
+
+/* -webkit- : 크롬, sapari, edge 에서만  적용되는 스타일  */
+input[type=file]::-webkit-file-upload-button{
+   background:skyblue;
+   border: none;
+   padding: 20px;
+   margin: 20px;
+
+  }
+
+.product-container div{
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+
+/* media query - css파일 맨 아래에 적어야 적용잘됨
+   반응형 레이아웃  
+    현재 브라우저폭이 max-width 이하일 경우 안에 내용 적용됨!
+*/
+@media screen and (max-width:1200px){
+    .main-title{
+        font-size: 30px;
+    }
+
+    .nav-item{
+        font-size: 12px;
+    }
+
+    .product-container{
+      max-width: 600px;
+    }
+    .product-container div{
+      width: 50%;
+    }
+}
+
+@media screen and (max-width:750px){
+    .main-title{
+        font-size: 20px;
+    }
+
+    .nav-item{
+        font-size: 10px;
+    }
+
+    .product-container{
+      max-width: 300px;
+    }
+    .product-container div{
+      /* float: none;
+      margin: auto; */
+      width: 100%;
+    }
+}
+
+
+@media screen and (max-width:576px){
+    .main-title{
+        font-size: 10px;
+    }
+
+    .nav-item{
+        font-size: 8px;
+    }
+
+
+}
+
+
+
+

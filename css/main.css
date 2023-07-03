@@ -1,0 +1,68 @@
+.box{
+    width: 150px;
+    background: cadetblue;
+    margin: 10px; 
+    padding: 40px;
+    
+    /* border: 4px solid black; */
+    border-radius: 5px;
+
+    /* <div>,<p>,<h> - block level item
+    display: block; */
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 10px;
+    color:white ;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, .8);
+
+
+}
+
+.container{
+    width: 800px;
+
+}
+
+.header{
+    width:100%;
+    height: 50px;
+    background-color: aquamarine;
+
+}
+/* 가로 정렬 
+    1. float 이용
+            or  
+    2. display:inline-block
+*/
+.left-menu{
+    width: 20%;
+    height: 400px;
+    background-color: cornflowerblue;
+    /* float: left - 요소를 붕 띄워서 왼쪽정렬 */
+    /* float: left; */
+
+
+    display: inline-block;
+}
+
+.right{
+    width: 80%;
+    height: 400px;
+    background-color: coral;
+    /* float:left; */
+
+
+    display: inline-block;
+    vertical-align: top
+    ;
+}
+
+.footer{
+
+    /* 안보이는 이유: 위에 div 요소들이 붕 떠있어서 그자리에 배치됨 */
+    width: 100%;
+    height: 100px;
+    background-color:grey;
+    /* clear: both; */
+} 

@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.cart-background{
+    width: 100%;
+    background-color: #c2d3de;
+    padding: 30px;
+}
+
+.cart-table{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background:white;
+    border-radius: 10px;
+   
+}
+
+td, th{
+    /* border: 1px solid black; */
+
+}
+
+.cart-table td, .cart-table th{
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
+}
+
+.cart-table img{
+    width: 50px;
+}
+.cell-long{
+    /* td에게는 최대한 이만큼 차지해보세요~라는 뜻  ,max-width와 유사
+        다른 셀들의 최소폭을 방해하지 않는선에서 
+    */
+    width: 700px; 
+    /* 다른 열들돋 같이 스타일 적용됨 */
+}
+
+
+/* nth-child(n) selector- n번째 요소만 스타일링 */
+/* .cart-table th:nth-child(3){
+    width: 400px;
+} */
+
+.row-total{
+    text-align: right;
+}
+
+
+/* <button> <a> <input> 등 클릭할때 스타일을 다르게 줄수 도 있음
+-> pseudo-class */
+
+.btn{
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+   
+
+}
+/* pseduo-class 
+같이 쓸때 순서 중요함 -> h -> f-> a
+*/
+/* 마우스 올렸을때  */
+.btn:hover{
+    background-color: chocolate;
+}
+
+/* 클릭 후 찍혀있을때 */
+.btn:focus{
+    background-color:grey;
+}
+
+/* 클릭중일때 */
+.btn:active{
+    background-color: brown;
+    border: 2px solid black;
+}
+.input-test{
+    font-size: 10px;
+}
+
+
+.input-test:focus{
+     border-bottom: 5px solid red;
+     
+}
+
+
+.custom-link{
+  text-decoration: none;  
+}
+
+ /* 방문전 링크 스타일링 :link */
+.custom-link:link{
+    color: skyblue;
+}
+
+/* 방문 후 링크 스타일링 :visited */
+.custom-link:visited{
+    color: black;
+}

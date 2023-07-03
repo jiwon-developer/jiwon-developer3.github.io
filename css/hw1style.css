@@ -1,0 +1,115 @@
+.container{
+    margin: 0;
+    width: 800px;
+    height: 300px;
+    font-family:sans-serif;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+
+
+.left{
+
+    width: 70%;
+    float: left;
+    font-size: 10px;   
+    color: grey;
+  
+    
+    padding: 10px 0;    
+}
+
+.left-top{
+    margin-bottom: 20px;
+}
+
+
+.profileImg{
+   
+    width: 30px;
+    /* margin: 0 0 0 ÷ */
+    float: left;
+    margin-right: 10px;
+
+}
+
+.name{
+    /* display: block; */
+    float: left;
+}
+.name>p{
+    margin: 0;
+   /* float: ; */
+
+}
+
+
+.left-bottom{
+    margin: 20px 0;
+    /* 
+    float을 clear할 가상의 div를 위에 만들어 줘서 margin 잘 잘안되는등 float관련 문제 해결  
+
+
+    clear: both; */
+
+}
+
+
+.text{
+    display: block;
+}
+.exlink{
+    float: right;
+}
+.link{
+    width: 20px;
+    /* float: right; */
+    
+}
+
+
+h3{
+    color: black;
+}
+
+.right{
+    width: 30%;
+    float: left;
+    letter-spacing: .2rem;
+
+}
+
+
+.beamImg{
+    margin-left: 10px;
+    width: 200px;
+
+}
+
+
+.navbar{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: antiquewhite;
+}
+
+.navbar li{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar a{ 
+    font-size: 16px;
+    text-decoration:none;
+    
+
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="html 잘하는 코딩애플입니다" />
+    <meta name="keywords" content="HTML,CSS,JAVASCRIPT, 자바스크립트,코딩" />
+    <!-- 반응형 페이지를 원하면 반드시 필요  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main2.css" />
+    <link rel="stylesheet" href="github.com/necolas/normalize.css" />
+    <!-- font awesome  
+      방법 1. cdn  
+       장점- 간편, 다운로드 속도 빠름, 단점 - 사이트가 다운되면 사용불가 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  />
+       
+      
+       방법 2. 직접 다운로드 
+      -->
+      <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <!-- IE 옛버전 호환성을 위한 IE 용 css파일을 첨부  -->
+    <!-- [if lt IE 10]> 
+        <link rel="stylesheet" href="css/ie.css"" type="text/css" />
+    <![end if]-->
+  
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav-container">
+      <div class="nav-item">Shooshop</div>
+      <div class="nav-grow"></div>
+      <div class="nav-item">Products</div>
+      <div class="nav-item">Service</div>
+    </nav>
+
+    <!-- <div class="test"></div> -->
+
+    <div class="main-background">
+      <h4 class="main-title">Buy Our Shoes! Now on Sale!</h4>
+      <p class="main-content">
+        Shop your style with the latest casual shoes from Nike®. Browse new
+        styles & colors now. Shop exclusive new styles crafted with the latest
+        Nike® technology & innovations now. Shop exclusive new styles crafted
+        with the latest Nike® technology & innovations now.
+      </p>
+      <button class="main-button">Buy Now</button>
+
+      <!-- <div class="comment-box">
+            <h4>How we design our shoes</h4>
+            <p>imply put, shoe design involves designing trendy and creative shoes that appeal to the market. As a shoe designer, you have to develop the design, decide which material to use, take part in the shoe manufacturing process, and so much more.</p>        
+        </div> -->
+    </div>
+
+    <button class="fixedBtn">fixed item</button>
+    <div class="comment-box2">
+      <h4 class="pseudo">How we design our shoes</h4>
+      <p>
+        imply put, shoe design involves designing trendy and creative shoes that
+        appeal to the market. As a shoe designer, you have to develop the
+        design, decide which material to use, take part in the shoe
+        manufacturing process, and so much more.
+      </p>
+    </div>
+
+  
+    <input type="file"  class="input-file">
+
+    <input placeholder="hihi"">
+     
+    <input type="range" >
+    <progress value="0.5"></progress>
+    
+
+    <div class="product-container">
+      <div class="product-box">
+        <i class="fa-sharp fa-solid fa-cart-shopping fa-3x"></i>
+        <h4>Fast Shipping</h4>
+        <p>lorem ipsum</p>
+      </div>
+
+      <div>
+        <i class="fa-regular fa-face-smile fa-3x"></i>
+        <h4>Good Service</h4>
+        <p>lorem ipsum</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-gift fa-3x"></i>
+        <h4>Free Coupons</h4>
+        <p>lorem ipsum</p>
+      </div> 
+      <div>
+
+        <i class="fa-solid fa-shoe-prints fa-3x"></i>
+        <h4>New Products</h4>
+        <p>lorem ipsum </p>
+      </div>
+      <!-- pseudo element로 대신 처리 가능 
+          <div style="float:none; clear:both;"></div> -->
+    </div>
+    
+
+    <!-- animation step
+      1. 시작 스타일 만들기
+      2. 최종 스타일 만들기
+      3. 언제 최종스타일로 변하는지
+      4. transitiond으로 애니메이션 
+    -->
+    <div class="shop-bg">
+      <div class="shop-container">
+        <div class="shop-item">
+          <div style="position:relative;">
+             <div class="overlay-wrap">
+             <div class="overlay-black"><span>$30</span></div>
+             </div>
+             <img src="./image/product1.jpeg" alt="">
+          </div>
+        </div>
+        <div class="shop-item">
+          <img src="image/product2.jpg" alt="">
+        </div>
+        <div class="shop-item">
+          <img src="./image/product3.jpg" alt="">
+        </div>
+      </div>   
+    </div>
+
+
+
+
+
+    <div class="form-background">
+      <div class="form-white">
+        <form>
+          <div class="w-100">
+            <h3>Contact Us</h3>
+            <p>Your Email</p>
+            <input class="form-input" type="email" />
+          </div>
+
+          <div class="w-50">
+            <p>First Name</p>
+            <input class="form-input" type="text" />
+          </div>
+          <div class="w-50">
+            <p>Last Name</p>
+            <input class="form-input" type="text" />
+          </div>
+
+          <div style="clear: both"></div>
+
+          <div class="w-100">
+            <p>Message</p>
+            <textarea class="form-input form-long"></textarea>
+          </div>
+
+          <div>
+            <input id="sub" type="checkbox" />
+            <label for="sub">Subscribe</label>
+
+            <button class="yellow-button">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br />
+  </body>
+</html>
