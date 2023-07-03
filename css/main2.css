@@ -9,12 +9,12 @@
 @font-face {
   font-family: 'nanumfont';
   font-weight: 800;
-  src: url('../font/NanumSquareAcB.woff');
+  src: url('/font/NanumSquareAcB.woff');
   /* font-weight: 900; */
 }
 @font-face {
   font-family: 'nanumfont';
-  src: url('../font/NanumSquareAcR.woff');
+  src: url('/font/NanumSquareAcR.woff');
 
   /* font-weight: 900; */
 }
@@ -49,7 +49,7 @@ span {
   /* 배경 두개 겹치기 
      background-image: url("../image/flower.jpeg") , url("");
     */
-  background-image: url('../image/shoes.jpg');
+  background-image: url('/image/shoes.jpg');
 
   /*  */
   background-size: cover;
